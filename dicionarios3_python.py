@@ -14,3 +14,8 @@ if "naoexiste" in d1:
 d1["nomedachave"] = "Nova chave"
 if d1.get("nomedachave"):
     print(d1.get("nomedachave"))
+    
+if d1.get("str") is not None:
+    print(d1.get("str"))
+    
+print(123)
