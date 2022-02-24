@@ -15,19 +15,19 @@ perguntas = {
 print()
 
 respostas_certas = 0
-for pk, pv in perguntas.items():
-    print(f'{pk}:{pv["Pergunta"]}')
+for pkey, pvalue in perguntas.items():
+    print(f'{pkey}:{pvalue["Pergunta"]}')
     print("Respostas")
 
-    for rk, rv in pv["respostas"].items():
-        print(f'[{rk}]:{rv}')
+    for rkey, rvalue in pvalue["respostas"].items():
+        print(f'[{rkey}]:{rvalue}')
 
 
     print()
     resposta_usuario = input("Sua resposta: ")
     print()
 
-    if resposta_usuario == pv["resposta_certa:"]:
+    if resposta_usuario == pvalue["resposta_certa:"]:
         print("Você acertou!")
         respostas_certas +=1
     else:
@@ -35,6 +35,15 @@ for pk, pv in perguntas.items():
 
 qtd_perguntas = len(perguntas)
 porcentagem_acerto = respostas_certas / qtd_perguntas * 100
+
+print(f'Você acertou {respostas_certas} respostas')
+print(f'Sua porcentagem de acerto foi {porcentagem_acerto}%')
+        
+    else:
+        print("Você errou!")
+
+qtd_perguntas = len(perguntas)
+porcentagem_acerto = respostas_certas / qtd_perguntas * 100  #conversão em porcentagem
 
 print(f'Você acertou {respostas_certas} respostas')
 print(f'Sua porcentagem de acerto foi {porcentagem_acerto}%')
